@@ -1,0 +1,16 @@
+{
+  "name": "node-server-handling",
+  "version": "1.0.0",
+  "description": "Node-js-concepts",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon main.js",
+    "start-server": "node main.js"
+  },
+  "author": "Asad Ali",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
