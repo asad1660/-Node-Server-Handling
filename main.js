@@ -1,15 +1,20 @@
-const http = require("http");
+//const http = require("http");
+const bodyPaser = require("body-parser");
 const express = require("express");
 const app = express();
-const routes = require("./routes");
+//const routes = require("./routes");
+const adminRoutes = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
+app.use(
+  bodyPaser.urlencoded({
+    extended: false,
+  })
+);
+app.use(adminRoutes);
+app.use(shopRoutes);
 app.use((req, res, next) => {
-  console.log("middle ware one");
-  next();
-});
-app.use((req, res, next) => {
-  console.log("middle ware two");
-  res.send(`<h1>hello from express js</h1>`);
+  res.status(404).send(`<h1>404 page not found</h1>`);
 });
 // const server = http.createServer(app);
 
