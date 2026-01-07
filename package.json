@@ -2,19 +2,25 @@
   "name": "node-server-handling",
   "version": "1.0.0",
   "description": "Node-js-concepts",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon main.js",
-    "start-server": "node main.js"
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
   },
   "author": "Asad Ali",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^1.18.3"
   },
   "dependencies": {
     "body-parser": "^2.2.1",
-    "express": "^5.2.1"
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "express-handlebars": "^8.0.4",
+    "mysql2": "^3.16.0",
+    "pug": "^3.0.3",
+    "sequelize": "^6.37.7"
   }
 }
